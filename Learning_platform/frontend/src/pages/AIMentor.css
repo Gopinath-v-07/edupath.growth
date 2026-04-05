@@ -60,3 +60,41 @@
     font-size: 0.95rem;
     color: var(--text-secondary);
 }
+
+@media (max-width: 768px) {
+    .mentor-main {
+        padding: 1rem;
+    }
+
+    .mentor-header {
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.85rem;
+    }
+
+    .mentor-header h2 {
+        margin-bottom: 0.2rem;
+    }
+
+    .mentor-header p {
+        font-size: 0.82rem;
+    }
+
+    .chatbot-wrapper {
+        border-radius: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mentor-main {
+        padding: 0.75rem;
+    }
+
+    .mentor-header {
+        align-items: flex-start;
+    }
+
+    .mentor-header h2 {
+        font-size: 1.3rem;
+    }
+}

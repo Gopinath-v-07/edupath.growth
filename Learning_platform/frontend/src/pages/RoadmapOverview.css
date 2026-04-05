@@ -121,3 +121,43 @@
 .empty-state p {
     color: var(--text-secondary);
 }
+
+@media (max-width: 768px) {
+    .roadmap-overview-container {
+        padding: 1.25rem 1rem;
+    }
+
+    .overview-header {
+        margin-bottom: 1.75rem;
+        align-items: flex-start;
+    }
+
+    .roadmap-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .roadmap-card {
+        padding: 1.1rem;
+    }
+
+    .roadmap-title {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .roadmap-overview-container {
+        padding: 1rem 0.75rem;
+    }
+
+    .roadmap-card-header {
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+
+    .progress-badge {
+        font-size: 0.72rem;
+        padding: 0.2rem 0.55rem;
+    }
+}

@@ -921,6 +921,145 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
+/* Final responsive overrides */
+@media (max-width: 1024px) {
+    .hero-container,
+    .showcase-container,
+    .how-it-works-container,
+    .mentoring-container,
+    .community-container {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        padding: 0 !important;
+    }
+
+    .hero-content,
+    .showcase-text,
+    .mentoring-content,
+    .community-content {
+        order: 1;
+    }
+
+    .hero-visual,
+    .showcase-image,
+    .mentoring-image,
+    .community-image {
+        order: 2;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section,
+    .features-section,
+    .stats-showcase-section,
+    .mentoring-section,
+    .community-section,
+    .testimonials-section,
+    .pricing-section,
+    .cta-section {
+        padding: 2.25rem 1rem !important;
+    }
+
+    .hero-title {
+        font-size: clamp(1.8rem, 7.5vw, 2.3rem) !important;
+    }
+
+    .hero-description,
+    .section-subtitle,
+    .showcase-subtitle,
+    .mentoring-description,
+    .community-description,
+    .testimonial-text,
+    .cta-subtitle {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .hero-cta-group,
+    .cta-buttons {
+        width: 100%;
+        display: grid !important;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .hero-cta-group .btn,
+    .cta-buttons .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.85rem 1rem;
+        font-size: 0.92rem;
+    }
+
+    .hero-social-proof {
+        width: 100% !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.8rem !important;
+        border-radius: 16px;
+        padding: 1rem;
+    }
+
+    .proof-stat {
+        text-align: center !important;
+    }
+
+    .proof-divider {
+        width: 100% !important;
+        height: 1px !important;
+    }
+
+    .features-grid,
+    .testimonials-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    .feature-item,
+    .testimonial-card,
+    .pricing-card,
+    .step-card {
+        padding: 1.15rem !important;
+    }
+
+    .section-title,
+    .showcase-text h2,
+    .mentoring-title,
+    .community-title,
+    .cta-title {
+        font-size: clamp(1.45rem, 6vw, 1.9rem) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-badge,
+    .section-tag,
+    .verified-badge {
+        font-size: 0.72rem !important;
+        padding: 0.45rem 0.75rem !important;
+    }
+
+    .feature-benefits li,
+    .plan-features li,
+    .mentoring-features li,
+    .community-features li,
+    .highlight-item {
+        font-size: 0.86rem !important;
+        align-items: flex-start;
+    }
+
+    .btn,
+    .btn-large,
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        padding: 0.8rem 0.9rem !important;
+        font-size: 0.88rem !important;
+        border-radius: 14px !important;
+    }
+}
+
 /* ── RESPONSIVE DESIGN ── */
 @media (max-width: 768px) {
     .hero-container,
