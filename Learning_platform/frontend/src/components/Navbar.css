@@ -265,7 +265,7 @@
     .navbar-center-links {
         gap: 1.25rem;
     }
-    .nav-streak-capsule { display: none; } /* hide streak on tablet to save space */
+    .nav-streak-capsule { display: inline-flex; }
 }
 
 /* ══ MOBILE (≤ 768px) ══ */
@@ -273,6 +273,13 @@
     .navbar {
         padding: 0 1rem;
         gap: 0.5rem;
+    }
+
+    .navbar-left,
+    .navbar-right-links {
+        min-height: var(--navbar-height);
+        display: flex;
+        align-items: center;
     }
 
     /* Show hamburger */
@@ -284,8 +291,16 @@
     /* Hide dashboard link text on mobile */
     .dashboard-link { display: none; }
 
-    /* Hide streak capsule on mobile */
-    .nav-streak-capsule { display: none; }
+    /* Compact streak capsule on mobile */
+    .nav-streak-capsule {
+        display: inline-flex;
+        padding: 0.2rem 0.5rem;
+        font-size: 0.74rem;
+        gap: 0.2rem;
+    }
+
+    .streak-emoji { font-size: 0.9rem; }
+    .streak-count { font-size: 0.76rem; }
 
     /* Tighten right actions */
     .nav-actions-container { gap: 0.5rem; }
@@ -294,6 +309,10 @@
     .margin-right-btn {
         margin-right: 0;
         font-size: 0.85rem;
+        display: inline-flex;
+        align-items: center;
+        height: 38px;
+        line-height: 1;
     }
 
     .navbar-right-links .btn.btn-sm {
@@ -321,10 +340,20 @@
     .margin-right-btn {
         display: inline-flex;
         font-size: 0.76rem;
+        height: 36px;
     }
 
     .navbar-right-links .btn.btn-sm {
         padding: 0.45rem 0.75rem;
         font-size: 0.76rem;
+        height: 36px;
+    }
+
+    .nav-streak-capsule {
+        padding: 0.2rem 0.42rem;
+    }
+
+    .nav-bell-container {
+        display: none;
     }
 }

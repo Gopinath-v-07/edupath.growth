@@ -154,9 +154,9 @@ const Roadmap = () => {
                 </div>
 
                 {/* Right-side actions */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginLeft: 'auto' }}>
+                <div className="roadmap-header-actions">
                     {viewMode === 'summary' && (
-                        <div style={{ display: 'flex', gap: '0.6rem' }}>
+                        <div className="summary-action-group">
                             <button
                                 onClick={handleDownloadReport}
                                 style={btnStyle}
