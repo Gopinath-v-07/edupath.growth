@@ -146,3 +146,229 @@
     height: 1px;
     background: var(--border);
 }
+
+.auth-left {
+    flex: 1;
+    max-width: 680px;
+    padding: 2rem 2.5rem 2rem 0;
+}
+
+.auth-right {
+    width: min(100%, 420px);
+    display: flex;
+    justify-content: center;
+}
+
+.auth-brand-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+    box-shadow: 0 14px 34px rgba(37, 99, 235, 0.28);
+    margin-bottom: 1rem;
+}
+
+.auth-brand-icon svg {
+    width: 36px;
+    height: 36px;
+    stroke: #ffffff;
+    fill: none;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.auth-left-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--secondary);
+    margin-bottom: 0.85rem;
+}
+
+.auth-left-title span {
+    color: var(--primary);
+}
+
+.auth-left-subtitle {
+    max-width: 560px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1.4rem;
+}
+
+.auth-preview {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 1rem;
+    max-width: 620px;
+}
+
+.auth-preview-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 0.9rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.main-card {
+    min-height: 190px;
+}
+
+.side-card {
+    align-self: start;
+}
+
+.preview-stat {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
+}
+
+.preview-stat-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #3b82f6;
+}
+
+.preview-stat-dot.green {
+    background: #10b981;
+}
+
+.preview-stat-dot.orange {
+    background: #f59e0b;
+}
+
+.preview-stat-label {
+    font-size: 0.72rem;
+    color: #4b5563;
+}
+
+.preview-stat-val {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.preview-bar-group {
+    margin-top: 0.5rem;
+    display: grid;
+    gap: 0.4rem;
+}
+
+.preview-bar-row {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.preview-bar-label {
+    font-size: 0.66rem;
+    color: #4b5563;
+}
+
+.preview-bar-track {
+    background: #e5e7eb;
+    height: 6px;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.preview-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #60a5fa 0%, #2563eb 100%);
+}
+
+.preview-tag {
+    display: inline-flex;
+    padding: 0.25rem 0.45rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+    border-radius: 999px;
+    font-size: 0.62rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    background: #dbeafe;
+}
+
+.preview-tag.green {
+    color: #065f46;
+    background: #d1fae5;
+}
+
+.preview-tag.orange {
+    color: #9a3412;
+    background: #ffedd5;
+}
+
+.auth-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+    text-decoration: none;
+    margin-bottom: 0.45rem;
+}
+
+.auth-back-btn:hover {
+    color: var(--primary);
+}
+
+.auth-input-wrapper {
+    position: relative;
+}
+
+.auth-input-wrapper input {
+    padding-right: 2.4rem;
+}
+
+.auth-eye-btn {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+    color: #6b7280;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 980px) {
+    .auth-page {
+        flex-direction: column;
+        gap: 1.25rem;
+        align-items: stretch;
+    }
+
+    .auth-left {
+        max-width: none;
+        padding: 0;
+    }
+
+    .auth-preview {
+        grid-template-columns: 1fr;
+        max-width: none;
+    }
+
+    .auth-right {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .auth-card {
+        max-width: none;
+    }
+}
