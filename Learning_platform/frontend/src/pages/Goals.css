@@ -1,0 +1,110 @@
+/* Goals Page */
+.goals-container {
+    min-height: 100vh;
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem var(--spacing-lg);
+}
+
+.goals-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.goals-header h1 {
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    font-weight: 800;
+    color: var(--secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.goals-header p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+.goals-form {
+    width: 100%;
+    max-width: 520px;
+    padding: 1.5rem 1.75rem;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.goal-section {
+    margin-bottom: 1rem;
+}
+
+.goal-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.goal-subtext {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.preset-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.preset-tag {
+    background: var(--bg-color);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-full);
+    padding: 0.45rem 1rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.preset-tag:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
+.preset-tag.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.goal-input {
+    background: white;
+    border: 1.5px solid var(--border);
+}
+.goal-input:focus {
+    background: white;
+}
+
+.goal-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 2rem 0;
+}
+
+.goals-actions {
+    margin-top: 2.5rem;
+}
+
+@media (max-width: 600px) {
+    .goals-form { padding: 1.5rem; }
+}

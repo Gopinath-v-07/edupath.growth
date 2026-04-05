@@ -1,0 +1,165 @@
+/* Analysis / Progress Page */
+.analysis-page-layout {
+    display: flex;
+    min-height: 100vh;
+    background: var(--bg-color);
+}
+
+.analysis-scroll-area {
+    flex: 1;
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    overflow-y: auto;
+}
+
+/* Header */
+.progress-header-bar { margin-bottom: var(--spacing-xl); }
+
+.progress-page-title {
+    font-size: clamp(1.7rem, 4vw, 2rem);
+    font-weight: 800;
+    color: var(--secondary);
+    margin: 0 0 var(--spacing-sm) 0;
+}
+
+.progress-motivation {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+.progress-motivation strong { color: var(--text-primary); font-weight: 700; }
+
+/* Stat Cards */
+.progress-stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.progress-stat-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.progress-stat-card:hover { 
+    box-shadow: var(--shadow-lg); 
+    transform: translateY(-6px);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.stat-icon-box {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-light);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.25rem;
+}
+
+.stat-label { font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.stat-value { font-size: 2rem; font-weight: 800; color: var(--secondary); line-height: 1.1; }
+
+/* Time Spendings */
+.time-spendings-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.time-spendings-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.ts-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-lg);
+}
+
+.ts-title { font-size: 1.1rem; font-weight: 700; color: var(--secondary); margin-bottom: var(--spacing-sm); }
+
+.ts-total {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.ts-trend { font-size: 0.8rem; font-weight: 600; color: var(--success); }
+
+.ts-period-btn {
+    background: var(--bg-color);
+    border: 1px solid var(--border);
+    border-radius: 100px; /* Pill button styling for filters */
+    padding: 0.4rem 1.1rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-family: var(--font-family);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ts-period-btn:hover { background: var(--primary-light); color: var(--primary); }
+
+.ts-chart-wrapper { margin-top: 1rem; }
+
+/* Skill Analysis */
+.analysis-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1.25rem;
+}
+
+.readiness-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+    background: var(--bg-color);
+    border-radius: var(--radius-xl);
+    margin: 1.5rem 0;
+}
+
+.big-number { font-size: 3.5rem; font-weight: 800; color: var(--primary); line-height: 1; margin-bottom: 0.5rem; }
+
+.status-badge { padding: 0.4rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+
+.score-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.875rem;
+}
+
+.badge { padding: 0.2rem 0.65rem; border-radius: 20px; font-size: 0.78rem; font-weight: 600; }
+.badge.advanced     { background: #DCFCE7; color: #166534; }
+.badge.intermediate { background: #FEF9C3; color: #854D0E; }
+.badge.basic        { background: #FFEDD5; color: #9A3412; }
+.badge.foundation   { background: #FEE2E2; color: #991B1B; }
+
+.readiness-score.industry-ready .status-badge { background: var(--success); color: white; }
+.readiness-score.developing     .status-badge { background: var(--warning); color: white; }
+.readiness-score.beginner       .status-badge { background: var(--error); color: white; }
+
+@media (max-width: 768px) {
+    .analysis-scroll-area  { padding: 1.5rem; }
+    .progress-stats-row    { grid-template-columns: 1fr; }
+    .analysis-grid         { grid-template-columns: 1fr; }
+}

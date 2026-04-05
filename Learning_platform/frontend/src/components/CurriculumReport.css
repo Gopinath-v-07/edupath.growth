@@ -1,0 +1,236 @@
+/* ==========================================
+   CurriculumReport — PDF-style layout
+   Inspired by Udemy / Coursera typography scale
+   ========================================== */
+
+.cr-report {
+    background: #ffffff;
+    color: #1a1a2e;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.1);
+    font-size: 16px; /* base */
+}
+
+/* ── Header ── */
+.cr-header {
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+    padding: 3rem 3rem 2.5rem;
+    color: white;
+}
+
+.cr-logo-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.cr-logo-icon { font-size: 1.6rem; }
+
+.cr-logo-text {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.cr-logo-text span { color: #93C5FD; }
+
+.cr-course-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0 0 1.5rem;
+    line-height: 1.25;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.cr-meta-chips {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.cr-chip {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 24px;
+    padding: 0.45rem 1.1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* ── Sections ── */
+.cr-section {
+    padding: 2.5rem 3rem;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.cr-section:last-child { border-bottom: none; }
+
+.cr-section-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0F172A;
+    margin: 0 0 0.5rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2.5px solid #2563EB;
+    display: inline-block;
+}
+
+.cr-sub-text {
+    font-size: 1rem;
+    color: #64748B;
+    margin: 0.35rem 0 1.75rem;
+}
+
+.cr-overview-text {
+    font-size: 1.05rem;
+    color: #334155;
+    line-height: 1.75;
+    margin: 0.75rem 0 1.75rem;
+}
+
+/* ── Stats row ── */
+.cr-stats-row {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.cr-stat-box {
+    flex: 1;
+    min-width: 160px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+}
+
+.cr-stat-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #94A3B8;
+    margin-bottom: 0.35rem;
+}
+
+.cr-stat-value {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+/* ── Week Block ── */
+.cr-week-block {
+    margin-bottom: 3rem;
+}
+
+.cr-week-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px dashed #CBD5E1;
+}
+
+.cr-week-badge {
+    background: #2563EB;
+    color: white;
+    font-size: 0.88rem;
+    font-weight: 800;
+    padding: 0.4rem 1.1rem;
+    border-radius: 24px;
+    letter-spacing: 0.4px;
+}
+
+.cr-week-meta {
+    font-size: 0.9rem;
+    color: #94A3B8;
+    font-weight: 600;
+}
+
+/* ── Day Block ── */
+.cr-day-block {
+    background: #FAFBFF;
+    border: 1px solid #E2E8F0;
+    border-left: 5px solid #2563EB;
+    border-radius: 10px;
+    padding: 1.75rem 2rem;
+    margin-bottom: 1.25rem;
+    transition: box-shadow 0.2s;
+}
+
+.cr-day-block:hover {
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08);
+}
+
+.cr-day-label {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #1D4ED8;
+    margin-bottom: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cr-day-label::before {
+    content: '▶';
+    font-size: 0.7rem;
+    color: #93C5FD;
+}
+
+/* ── Markdown inside report (Udemy-style typography) ── */
+.cr-notes-body {
+    color: #1e293b;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.cr-md-p    { margin: 0 0 1rem; }
+
+.cr-md-h3   {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e40af;
+    margin: 1.25rem 0 0.5rem;
+    padding: 0.4rem 0.75rem;
+    background: #EFF6FF;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.cr-md-h4   {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #374151;
+    margin: 1rem 0 0.4rem;
+}
+
+.cr-md-strong { color: #1e40af; font-weight: 700; }
+
+.cr-md-ul,
+.cr-md-ol   { padding-left: 1.75rem; margin: 0.5rem 0 1.1rem; }
+
+.cr-md-li   {
+    margin-bottom: 0.55rem;
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ── Footer ── */
+.cr-footer {
+    background: #F8FAFC;
+    border-top: 1px solid #E2E8F0;
+    padding: 1rem 3rem;
+    font-size: 0.85rem;
+    color: #94A3B8;
+    text-align: right;
+}

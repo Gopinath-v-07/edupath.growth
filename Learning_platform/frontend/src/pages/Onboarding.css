@@ -1,0 +1,113 @@
+/* Onboarding */
+.onboarding-container {
+    min-height: 100vh;
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem var(--spacing-lg);
+}
+
+.onboarding-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 1.75rem;
+    width: 100%;
+    max-width: 560px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+.onboarding-card h2 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 800;
+    color: var(--secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.progress-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--border);
+}
+
+.step {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    opacity: 0.5;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.step.active {
+    color: var(--primary);
+    opacity: 1;
+    font-weight: 700;
+}
+
+.step-content {
+    text-align: left;
+    animation: fadeIn 0.3s ease;
+}
+
+.step-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.rating-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border);
+    gap: var(--spacing-md);
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: transparent;
+    cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--primary);
+    cursor: pointer;
+    margin-top: -7px;
+    box-shadow: 0 3px 8px rgba(59, 130, 246, 0.3);
+    transition: all 0.2s;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: var(--border);
+    border-radius: 3px;
+}

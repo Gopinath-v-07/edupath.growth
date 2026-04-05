@@ -1,0 +1,45 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+build/
+dist/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local databases and runtime artifacts
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.pid
+
+# Project-specific generated folders
+Learning_platform/backend/uploads/
+Learning_platform/backend/start_error.log
+Learning_platform/frontend/error.log
+Learning_platform/frontend/node_modules/
+Learning_platform/frontend/dist/
+Learning_platform/backend/venv/

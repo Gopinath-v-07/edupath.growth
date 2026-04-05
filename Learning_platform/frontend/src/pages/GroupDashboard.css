@@ -1,0 +1,132 @@
+/* GroupDashboard */
+.group-study-space {
+    min-height: 100vh;
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.group-header {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: var(--spacing-2xl) var(--spacing-xl) 0;
+}
+
+.group-header-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.group-header-info h1 {
+    font-size: clamp(1.6rem, 3vw, 1.9rem);
+    font-weight: 800;
+    color: var(--secondary);
+    margin: 0;
+}
+
+.group-badge {
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.group-nav {
+    display: flex;
+    gap: var(--spacing-2xl);
+    overflow-x: auto;
+}
+
+.group-nav-btn {
+    background: none;
+    border: none;
+    padding: 0.85rem 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    font-family: var(--font-family);
+}
+
+.group-nav-btn:hover {
+    color: var(--primary);
+}
+
+.group-nav-btn.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.group-main-content {
+    flex: 1;
+    padding: var(--spacing-2xl);
+    max-width: 1320px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.dashboard-top-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.placeholder-tab {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.placeholder-tab h2 {
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    color: var(--secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.placeholder-tab p {
+    color: var(--text-secondary);
+}
+
+.group-loading, .group-error {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--bg-color);
+}
+
+.group-error {
+    color: var(--error);
+}
+
+@media (max-width: 900px) {
+    .dashboard-top-section {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .group-header { padding: 1.5rem 1.5rem 0; }
+    .group-main-content { padding: 1.5rem; }
+}
