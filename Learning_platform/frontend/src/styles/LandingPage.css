@@ -2080,3 +2080,52 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Mobile enforcement overrides (must be last) */
+@media (max-width: 768px) {
+    .hero-container,
+    .showcase-container,
+    .how-it-works-container,
+    .mentoring-container,
+    .community-container {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+    }
+
+    .hero-cta-group,
+    .cta-buttons,
+    .cta-actions {
+        width: 100%;
+        display: grid !important;
+        grid-template-columns: 1fr;
+    }
+
+    .hero-cta-group .btn,
+    .cta-buttons .btn,
+    .cta-actions a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .features-grid,
+    .testimonials-grid,
+    .pricing-grid,
+    .steps-container {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section,
+    .features-section,
+    .stats-showcase-section,
+    .mentoring-section,
+    .community-section,
+    .testimonials-section,
+    .pricing-section,
+    .cta-section,
+    .cta-final-section {
+        padding-left: 0.85rem !important;
+        padding-right: 0.85rem !important;
+    }
+}

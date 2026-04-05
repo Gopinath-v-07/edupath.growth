@@ -319,7 +319,8 @@
     }
 
     .margin-right-btn {
-        display: none;
+        display: inline-flex;
+        font-size: 0.76rem;
     }
 
     .navbar-right-links .btn.btn-sm {

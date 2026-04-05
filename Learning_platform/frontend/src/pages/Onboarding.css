@@ -111,3 +111,57 @@ input[type="range"]::-webkit-slider-runnable-track {
     background: var(--border);
     border-radius: 3px;
 }
+
+@media (max-width: 768px) {
+    .onboarding-container {
+        padding: 1rem;
+        align-items: flex-start;
+    }
+
+    .onboarding-card {
+        margin-top: 0.5rem;
+        padding: 1.15rem;
+        border-radius: 14px;
+    }
+
+    .progress-indicator {
+        gap: 0.5rem;
+    }
+
+    .step {
+        font-size: 0.7rem;
+        letter-spacing: 0.03em;
+    }
+
+    .step-content h3 {
+        font-size: 1rem;
+    }
+
+    .rating-desc {
+        font-size: 0.88rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .button-group {
+        flex-direction: column-reverse;
+    }
+
+    .button-group .btn,
+    .button-group button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .onboarding-card {
+        padding: 1rem 0.85rem;
+    }
+
+    .onboarding-card h2 {
+        font-size: 1.15rem;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+    }
+}
